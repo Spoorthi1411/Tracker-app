@@ -1,0 +1,19 @@
+# Handle line endings automatically
+* text=auto
+
+# Explicitly declare text files we want normalized
+*.js     text
+*.ts     text
+*.json   text
+*.css    text
+*.html   text
+*.md     text
+*.yml    text
+*.yaml   text
+
+# Declare binary files
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.ico    binary
