@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const GenderCheckbox = () => {
   return (
@@ -16,5 +16,7 @@ const GenderCheckbox = () => {
         </label>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default GenderCheckbox;
