@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const GenderCheckbox = () => {
-  const [selectedGender, setSelectedGender] = useState('');
-
-  const handleCheckboxChange = (gender) => {
-    setSelectedGender((prev) => (prev === gender ? '' : gender));
-  };
-
+const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
   return (
-    <div className='mt-2 flex gap-x-6 items-center'>
-      <div className='form-control'>
-        <label className='label gap-2 cursor-pointer flex items-center'>
+    <div className="flex gap-x-6 mt-4 mb-2">
+      {/* Male Checkbox */}
+      <div className="form-control">
+        <label
+          className={`label gap-2 cursor-pointer ${
+            selectedGender === "male" ? "selected" : ""
+          }`}
+        >
+          <span className="label-text">Male</span>
           <input
-            type='checkbox'
-            className='checkbox border-slate-900'
-            checked={selectedGender === 'male'}
-            onChange={() => handleCheckboxChange('male')}
+            type="checkbox"
+            className="checkbox border-slate-900"
+            checked={selectedGender === "male"}
+            onChange={() => onCheckboxChange("male")}
           />
-          <span className='label-text'>Male</span>
         </label>
       </div>
-      <div className='form-control'>
-        <label className='label gap-2 cursor-pointer flex items-center'>
+
+      {/* Female Checkbox */}
+      <div className="form-control">
+        <label
+          className={`label gap-2 cursor-pointer ${
+            selectedGender === "female" ? "selected" : ""
+          }`}
+        >
+          <span className="label-text">Female</span>
           <input
-            type='checkbox'
-            className='checkbox border-slate-900'
-            checked={selectedGender === 'female'}
-            onChange={() => handleCheckboxChange('female')}
+            type="checkbox"
+            className="checkbox border-slate-900"
+            checked={selectedGender === "female"}
+            onChange={() => onCheckboxChange("female")}
           />
-          <span className='label-text'>Female</span>
         </label>
       </div>
     </div>
@@ -36,6 +41,8 @@ const GenderCheckbox = () => {
 };
 
 export default GenderCheckbox;
+
+
 
 
 // import React from 'react';

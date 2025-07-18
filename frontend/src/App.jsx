@@ -1,17 +1,18 @@
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import SignUp from './pages/signup/SignUp';
-
+import {Toaster} from 'react-hot-toast';
 function App() {
   return (
     <div className='p-4 h-screen flex items-center justify-center'>
       <Routes>
-        <Route path='/Home' element={<Home/>} />
+        <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<SignUp/>} />
       </Routes>
+      <Toaster/>
      {/* <Home /> */}
      {/* <Login/> */}
      {/* <SignUp/>*/}
@@ -20,3 +21,4 @@ function App() {
 }
 
 export default App;
+
