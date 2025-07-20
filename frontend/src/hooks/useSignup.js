@@ -3,7 +3,6 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "../context/Authcontext";
 
 
-
 const useSignup = () => {
   const [loading, setLoading] = useState(false);
   const {setAuthUser} = useAuthContext()
